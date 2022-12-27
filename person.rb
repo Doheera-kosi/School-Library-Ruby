@@ -1,9 +1,6 @@
 require './decorator'
 
 class Person < Nameable
-  attr_reader :id
-  attr_accessor :name, :age
-
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
 
@@ -16,6 +13,9 @@ class Person < Nameable
   def correct_name
     @name = name
   end
+
+  attr_reader :id
+  attr_accessor :name, :age
 
   def of_age?
     @age >= 18
