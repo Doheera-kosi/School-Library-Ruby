@@ -13,13 +13,13 @@ class Decorator < Nameable
   end
 
   def correct_name
-    @nameble.correct_name
+    @nameable.correct_name
   end
 end
 
 class CapitalizeDecorator < Decorator
   def correct_name
-    @nameble.correct_name.capilize
+    @nameable.correct_name.capilize
   end
 end
 
