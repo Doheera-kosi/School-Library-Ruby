@@ -40,7 +40,7 @@ class App
   end
 
   def option(input)
-    case input 
+    case input
     when '1'
       list_books
     when '2'
@@ -72,7 +72,7 @@ class App
     title = gets.chomp
     print 'Enter Author for Book: '
     author = gets.chomp
-    book = Book.new(title,author)
+    book = Book.new(title, author)
     @books.push(book)
     puts 'Books Added Successfully!'
     back_to_menu
