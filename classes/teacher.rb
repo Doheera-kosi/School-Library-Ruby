@@ -3,8 +3,10 @@ require './person'
 class Teacher < Person
   def initialize(specialization, age, name = 'Unknown')
     @specialization = specialization
-    super(age, name)
+    @type = 'Teacher'.delete_prefix('"').delete_suffix('"')
+    super(age, parent_permission, name)
   end
+  attr_accessor :type
 
   def can_use_services?
     true
