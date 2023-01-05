@@ -10,7 +10,7 @@ class Book
   attr_reader :rentals
   attr_accessor :title, :author
 
-  def add_rentals=(person, date)
+  def add_rentals(person, date)
     Rental.new(self, person, date)
   end
 end
