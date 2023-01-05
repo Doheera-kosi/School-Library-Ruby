@@ -59,7 +59,7 @@ class App
   end
 
   def list_books
-    if @books.length.zero?
+    if @books.empty?
       puts 'No Books Available'
     else
       @books.each_with_index { |book, idx| puts "#{idx})  Book: #{book.title}, Author: #{book.author}" }
@@ -107,15 +107,15 @@ class App
   end
 
   def list_people
-    puts 'No person available' if @people.length.zero?
+    puts 'No person available' if @people.empty?
     @people.each { |person| puts "[#{person.type}] Name: #{person.name} Age: #{person.age}" }
     back_to_menu
   end
 
   def create_rental
-    if @books.size.zero?
+    if @books.empty?
       puts 'No Books Available'
-    elsif @people.size.zero?
+    elsif @people.empty?
       puts 'No Person Available'
     else
       puts 'Select a book from the following list by number'
