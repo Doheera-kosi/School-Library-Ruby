@@ -9,17 +9,17 @@ require 'date'
 class App
   def initialize
     @rentals = []
-    @books = []
     @people = []
+    @books = []
   end
 
   def console_entry_point
     puts ''
-    puts 'The Library of Books Welcome you!'
+    puts 'Welcome to my School Library App'
     until list_options
       input = gets.chomp
       if input == '7'
-        puts 'Thanks for using The School Library App (^_^)!'
+        puts 'Thanks for using School Library App (^_^)'
         break
       end
       option input
@@ -27,16 +27,16 @@ class App
   end
 
   def list_options
-    puts('------------------------------')
-    puts '1 - List All Books'
-    puts '2 - List All People'
-    puts '3 - Create a new Person'
-    puts '4 - Create a new Book'
-    puts '5 - Create a Rental'
-    puts '6 - List All Rentals of Given Person ID'
-    puts '7 - Quit/Exit'
-    puts('------------------------------')
-    print 'Enter number of operation: '
+    puts('-------------------------')
+    puts '1 - List all books'
+    puts '2 - List all people'
+    puts '3 - Create a person'
+    puts '4 - Create a book'
+    puts '5 - Create a rental'
+    puts '6 - List all rentals of given person id'
+    puts '7 - Quit'
+    puts('-------------------------')
+    print 'Enter number of the operation: '
   end
 
   def option(input)
@@ -54,13 +54,13 @@ class App
     when '6'
       list_rentals
     else
-      'Enter any digit from 1 thru 7'
+      'Enter digit from 1 to 7'
     end
   end
 
   def list_books
     if @books.length.zero?
-      puts 'Not Single Book Even Available'
+      puts 'No Books Available'
     else
       @books.each_with_index { |book, idx| puts "#{idx})  Book: #{book.title}, Author: #{book.author}" }
     end
@@ -68,18 +68,18 @@ class App
   end
 
   def create_book
-    print 'Enter Title for Book: '
+    print 'Enter Book Title: '
     title = gets.chomp
-    print 'Enter Author for Book: '
+    print 'Enter Book Author: '
     author = gets.chomp
     book = Book.new(title, author)
     @books.push(book)
-    puts 'Books Added Successfully!'
+    puts 'Book Successfully Created'
     back_to_menu
   end
 
   def create_person
-    puts '1 - Create Student 2 - Create Teacher'
+    puts '1 - Create Student  2 - Create Teacher'
     select_option
     person = gets.chomp
     print 'Insert age: '
@@ -87,17 +87,17 @@ class App
     print 'Insert name: '
     name = gets.chomp
     person_condition(person, age, name)
-    puts 'Person Created Successfully!'
+    puts 'Person Created Successfully'
     back_to_menu
   end
 
-  def create_condition(person, age, name)
+  def person_condition(person, age, name)
     case person
     when '1'
       print 'Has parents permission [Y/N]: '
       permit = gets.chomp.downcase
       parent_permission = permit != 'n'
-      @people.push(student.new(age, parent_permission, name))
+      @people.push(Student.new(age, parent_permission, name))
     when '2'
       print 'Insert specialization: '
       specialization = gets.chomp
@@ -119,26 +119,26 @@ class App
       puts 'No Person Available'
     else
       puts 'Select a book from the following list by number'
-      @books.each_with_index { |book, index| puts "#{index}) Book Title: #{book.title}, Book Author: #{book.author}" }
+      @books.each_with_index { |book, index| puts "#{index}) Book Title: #{book.title}, Author: #{book.author}" }
       rental_book = gets.chomp.to_i
       puts 'Select a person from the following list by number (not id)'
       @people.each_with_index do |person, index|
-        puts "#{index}) #{[person.type]} Name: #{person.name} Age: #{person.age} ID: #{person.id}"
+        puts "#{index}) #{[person.type]} Name: #{person.name} Age: #{person.age} Id: #{person.id}"
       end
       rental_person = gets.chomp.to_i
       puts 'Enter date'
       date = convert_date(gets)
       rental_detail = Rental.new(@people[rental_person], @books[rental_book], date)
       @rentals.push(rental_detail)
-      puts 'Rental Successfully Created!'
+      puts 'Rental Successfully Created'
     end
     back_to_menu
   end
 
   def list_rentals
     puts 'Select id of any person'
-    @person.each { |i| puts "[#{i.type.to_i}] id: #{i.id}, Person: #{i.name}" }
-    print 'Person Id'
+    @people.each { |i| puts "[#{i.type.to_i}] id: #{i.id}, Person: #{i.name}" }
+    print 'Person id: '
     person_id = gets.chomp
     @rentals.each do |i|
       puts "Date: #{i.date}, Book: '#{i.book.title}' by #{i.book.author}" if i.person.id.to_i == person_id.to_i
@@ -146,7 +146,7 @@ class App
   end
 
   def convert_date(str)
-    Date.person(str)
+    Date.parse(str)
   end
 
   def select_option
@@ -157,7 +157,7 @@ class App
 
   def back_to_menu
     puts ''
-    print 'Press Enter to go into menu'
+    print 'Press Enter to go in menu'
     gets.chomp
     puts ''
   end
