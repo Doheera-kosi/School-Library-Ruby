@@ -54,7 +54,7 @@ class App
     when '6'
       list_rentals
     else
-      'Enter any digit from 1 to 7'
+      'Enter any digit from 1 thru 7'
     end
   end
 
