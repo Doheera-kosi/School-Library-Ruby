@@ -6,7 +6,6 @@ class Book
     @author = author
     @rentals = []
   end
-
   attr_reader :rentals
   attr_accessor :title, :author
 

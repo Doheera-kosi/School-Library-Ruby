@@ -1,11 +1,11 @@
 class Classroom
   def initialize(label)
-    @students = []
     @label = label
+    @students = []
   end
 
-  attr_reader :students
   attr_accessor :label
+  attr_reader :students
 
   def add_student(student)
     @students.push(student)

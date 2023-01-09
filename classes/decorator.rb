@@ -1,6 +1,6 @@
 class Nameable
   def correct_name
-    raise NotImplementedError, "#{self.class} has no implemented method #{__method__}"
+    raise NotImplementedError, "#{self.class} has not implemented method #{__method__}"
   end
 end
 
@@ -19,7 +19,7 @@ end
 
 class CapitalizeDecorator < Decorator
   def correct_name
-    @nameable.correct_name.capilize
+    @nameable.correct_name.capitalize
   end
 end
 
