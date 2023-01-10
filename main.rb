@@ -1,6 +1,6 @@
 require 'json'
-require_relative './classes/app'
 require './app_functionality/data_processing'
+require_relative './classes/app'
 
 class Main
   include ProcessData
