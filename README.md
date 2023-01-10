@@ -4,19 +4,18 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-- [👥 Authors](#authors)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[School Library\] ](#-school-library-)
+    - [Tech Stack ](#tech-stack-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Usage](#usage)
+  - [👥 Author ](#-author-)
+  - [Future Feature](#future-feature)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -66,7 +65,7 @@ Run this from the root folder at the command prompt.
 
 ## 👥 Author <a name="authors"></a>
 
-👤 **Baayeh Kwasi**
+👤 **Evans Kupour**
 
 - GitHub: [Doheera-kosi](https://github.com/Doheera-kosi)
 - Twitter: [@KupourE](https://twitter.com/@KupourE)
@@ -74,6 +73,10 @@ Run this from the root folder at the command prompt.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Future Feature
+
+- We can add a feature to change existing book and author name in future.
 
 <!-- CONTRIBUTING -->
 
