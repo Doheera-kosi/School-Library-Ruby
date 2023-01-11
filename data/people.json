@@ -5,11 +5,34 @@
     "age" : "900",
     "class_name" : "Teacher"
   },
-
   {
     "id" : 90332421,
     "name" : "James Bond",
     "age" : "650",
+    "class_name" : "Student"
+  },
+  {
+    "id" : 935254723,
+    "name" : "Evans Kupour",
+    "age" : "20",
+    "class_name" : "Student"
+  },
+  {
+    "id" : 959530724,
+    "name" : "Evans",
+    "age" : "20",
+    "class_name" : "Student"
+  },
+  {
+    "id" : 525782193,
+    "name" : "Evans",
+    "age" : "22",
+    "class_name" : "Teacher"
+  },
+  {
+    "id" : 664244412,
+    "name" : "Sajeel",
+    "age" : "18",
     "class_name" : "Student"
   }
 ]
