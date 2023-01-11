@@ -1,5 +1,5 @@
-require '../classes/book'
-require '../classes/rentals'
+require_relative '../classes/book'
+require_relative '../classes/rentals'
 
 describe Book do
   book = Book.new('Evan', 'Sajeel')

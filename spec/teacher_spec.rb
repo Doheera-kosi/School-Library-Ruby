@@ -1,4 +1,4 @@
-require '../classes/teacher'
+require_relative '../classes/teacher'
 
 describe Teacher do
   teacher = Teacher.new('Doctor', 36, 'Professor')

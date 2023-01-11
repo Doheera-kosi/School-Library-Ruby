@@ -1,4 +1,4 @@
-require '../classes/student'
+require_relative '../classes/student'
 
 describe Student do
   student = Student.new(24, true, 'Evan')

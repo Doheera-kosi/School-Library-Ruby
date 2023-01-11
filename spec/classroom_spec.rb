@@ -1,4 +1,4 @@
-require '../classes/classroom'
+require_relative '../classes/classroom'
 
 describe Classroom do
   classroom = Classroom.new('Science')

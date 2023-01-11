@@ -1,4 +1,4 @@
-require '../classes/person'
+require_relative '../classes/person'
 
 describe Person do
   person = Person.new(28, true, 'Sajeel')
