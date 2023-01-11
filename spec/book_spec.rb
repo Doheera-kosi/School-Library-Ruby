@@ -1,8 +1,9 @@
 require '../classes/book.rb'
+require '../classes/rentals.rb'
 
 describe Book do
+    book = Book.new("Evan", "Sajeel")
     describe "Accessing book" do
-        book = Book.new("Evan", "Sajeel")
         it "output rentals" do
             expect(book.rentals).to eql([])
         end
@@ -11,6 +12,9 @@ describe Book do
         end
         it "output book author" do
             expect(book.author).to eql("Sajeel")
+        end
+        it 'is an instance of Book' do
+            expect(book).to be_an_instance_of(Book)
         end
     end
 end
